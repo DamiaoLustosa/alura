@@ -1,0 +1,76 @@
+Comandos no git (sem o "->"):
+
+cd -> tem a mesma função do cmd, carregando um novo diretório 
+ls -> lista as pastas e arquivos de um diretório
+git init -> inicializa um repositório escolhido
+git status -> mostra como está o repositório (alterações. etc.)
+git config --local user.name "Seu nome aqui"   -> identificação do nome
+git config --local user.email "seu@email.aqui"  -> identificação do email
+git log  -> mostra um histórico do que ocorreu com os arquivos
+git log --online  -> para exibir as informações dos commits em uma única linha
+git log -p   -> exibe as alterações do commit
+git config -> usado para exibir ou alterar as configurações locais ou globais do repositório
+
+git add "arquivo"  -> adiciona o arquivo para commit
+
+mkdir "nome" -> cria uma nova pasta no diretório
+
+git init --bare -> indica que o repositório só contém as alterações dos arquivos
+
+git remote add "nome" "caminho"  -> adiciona o repositório que servirá de servidor, seja ele local ou remoto
+
+git clone "caminho" -> faz o download dos dados de um repositorio para uma pasta local
+
+git push "servidor" "ramo local"   -> envia os dados do ramo local para o servidor remoto
+
+git remote rename "nome antigo" "nome novo"  -> remonear um servidor remoto
+
+git pull  -> pega os dados de repositorio remoto para o repositorio local. É parecido com o git clone
+
+git branch  -> lista os branchs que compõem o repositório
+
+git branch "nome"   -> cria um novo branch
+
+git checkout "nome'  -> muda para outro branch
+
+git merge "nome do branch"   -> mescla as mudanças nos branchs para o ramo principal (master)
+
+git rebase "nome do branch"   -> atualiza o branch master, unindo os commits do branch master com os commits do outro branch
+
+git checkout --"arquivo"   -> é uma espécie de Ctrl+Z para desfazer alterações feitas por commits anteriores
+
+git reset HEAD "arquivo"   -> desfaz alterações me arquivos que foram adicionados, mas não foram commitados
+
+git revert "rash do commit"  -> cria um commit revertendo outro commit já feito (desfaz). Rash é a sequência numérica do commit como um código
+
+git stash  -> realiza um salvamento temporario do arquivo no repositório, para ser continuado depois. Ele não faz um commit e nem desfaz o que já foi feito!
+
+git stash lista -> lista todos os stash que devem ser trabalhados depois, mostrando sua numeração
+
+git stash apply "numero"  -> selecionar uma stash para aplicar as modificações. Os dados permanecem na stash após esse comando
+
+git stash drop  -> apaga a stash
+
+git stash pop  -> pega a ultima alteração da stash e já a retira da propria stash. É uma mesca do stash apply e stash drop
+
+git checkout "numero do commit"  -> Direciona o desenvolvimento par ao commit passado pelo numero e o desvincula de todos os branchs. Para as alterações serem salvas é preciso criar um novo branch antes de realizar o commit
+
+git diff  -> mostra a diferença entre o que foi commitado e o que ainda não foi commitado (apenas adicionado)
+
+git diff "numero hash" .."numero hash"   -> mostra a diferença entre o que foi feito em dois commits informados
+
+git tag -a "nome ou número"  -> é usado para marcar/sinalizar um ponto importante no desenvolvimento, como uma release por exemplo
+
+git tag -> lista as tags existentes
+
+git push "local" "tag"  -> faz o push da tag para servidor, semelhante ao push dos commits
+
+
+
+
+
+
+
+
+
+
